@@ -1,0 +1,178 @@
+<?php
+    session_start();
+    $name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>HOME -- UNIVERSITY</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li><a href="course.php">COURSE</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="session">
+            <h1 style="color: #ffffff;">Welcome <?php echo $name; ?></h1>
+        </div>
+        <div class="text-box">
+            <h1>WORLD'S BIGGEST UNIVERSITY</h1>
+            <p>Making websites is now one of the easiest thing in the world. You just have to learn HTML, CSS, <br> Javascript and you are good to go.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="course">
+        <h1>COURSES WE OFFER</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3>INTERMEDIATE</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nostrum excepturi mollitia minus? Iusto cumque praesentium incidunt. Minima rerum tenetur esse, optio doloribus itaque minus error delectus nobis commodi maiores!</P>
+            </div>
+            <div class="course-col">
+                <h3>DEGREE</h3>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reiciendis magni tempora tenetur, error ad, corporis autem totam similique excepturi deserunt a cupiditate fugiat dolor quo impedit odio, in doloremque.</P>
+            </div>
+            <div class="course-col">
+                <h3>POST-GRADUATION</h3>
+                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi cupiditate id sed illo, tenetur repellendus aliquid eaque ut maxime corrupti autem quaerat alias fugiat earum! Repellendus exercitationem nihil eaque consequatur.</P>
+            </div>    
+        </div>
+    </section>
+
+    <!-- CAMPUS -->
+    <section class="campus">
+        <h1>OUR GLOBAL CAMPUS</h1>
+        <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</P>
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/london.png" alt="London campus">
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/newyork.png" alt="London campus">
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/washington.png" alt="London campus">
+                <div class="layer">
+                    <h3>WASHINGTON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FACILITIES -->
+    <section class="facilities">
+        <h1>OUR FACILITIES</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/library.png" alt="Library">
+                <h3>WORLD CLASS LIBRARY</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, placeat in. Doloribus!</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/basketball.png" alt="Basketball pitch">
+                <h3>LARGEST PLAYGROUND</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, placeat in. Doloribus!</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/cafeteria.png" alt="The cafeteria">
+                <h3>TASTY AND HEALTHY FOOD</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, placeat in. Doloribus!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h1>WHAT OUR STUDENTS SAY</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="images/user1.jpg" alt="First student">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos sunt laboriosam eligendi, repudiandae inventore reiciendis consequuntur officiis alias nobis nulla facere assumenda provident!</p>
+                    <h3>Christine Berkley</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="images/user2.jpg" alt="Second student">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium dignissimos sunt laboriosam eligendi, repudiandae inventore reiciendis consequuntur officiis alias nobis nulla facere assumenda provident!</p>
+                    <h3>David Byer</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+        <h1>ENROLL FOR OUR VARIOUS ONLINE COURSES <br> ANYWHERE FROM THE WORLD</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet tempora voluptate porro corporis quis quisquam,<br> nisi a vero quibusdam dicta commodi dignissimos ipsum totam.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart"></i> by Prince</p>
+    </section>
+
+    <!-- SCRIPT FOR THE TOGGLE MENU -->
+    <script>
+        const navlinks = document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right = "0";
+        }
+        function hideMenu(){
+            navlinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
