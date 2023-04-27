@@ -37,21 +37,27 @@
       $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     }
     if (empty($name_err) && empty($email_err) && empty($password_err)) {
-      // ADD DATA TO DATABASE
-      $sql = "INSERT INTO php_table (name, email, password) VALUES ('$name', '$email', '$password')";
-    }
-    if (mysqli_query($mysqli, $sql)) {
-      //  SUCCEEDED
-      // USER IS AUTHENTICATED, CREATE A SESSION
-      session_start();
-      $_SESSION["name"] = $name;
-      $_SESSION["email"] = $email;
-      // REDIRECT TO THE HOMEPAGE
-      header('Location: ../website/');
-      exit();
-    }else {
-      // ERROR
-      echo 'Error: ' . mysqli_error($conn);
+      // CHECK IF THE USER ALREADY EXISTS
+      $result = $mysqli -> query("SELECT * FROM php_table WHERE email='$email' AND password='$password'");
+      if ($result) {
+        echo 'User already exists!';
+      }else {
+        // ADD DATA TO DATABASE
+        $sql = "INSERT INTO php_table (name, email, password) VALUES ('$name', '$email', '$password')";
+        if (mysqli_query($mysqli, $sql)) {
+          //  SUCCEEDED
+          // USER IS AUTHENTICATED, CREATE A SESSION
+          session_start();
+          $_SESSION["name"] = $name;
+          $_SESSION["email"] = $email;
+          // REDIRECT TO THE HOMEPAGEgit 
+          header('Location: ../website/');
+          exit();
+        }else {
+          // ERROR
+          echo 'Error: ' . mysqli_error($conn);
+        }
+      }
     }
   }
 ?>
